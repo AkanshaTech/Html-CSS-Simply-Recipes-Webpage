@@ -340,8 +340,7 @@ Navbar
     height: auto !important;
     flex-direction: row;
     align-items: center;
-    /* width: 100%; */
-    background: var(--red-dark);
+    width: 100%;
   }
   .nav-link {
     padding: 0;
