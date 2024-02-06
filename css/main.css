@@ -297,7 +297,7 @@ Navbar
   transition: var(--transition);
 }
 .show-links {
-  height: 310px;
+  height: 21rem;
 }
 
 .nav-link {
@@ -466,11 +466,15 @@ Recipes
 .tags-list a {
   text-transform: capitalize;
   display: block;
-  color: var(--grey-500) ss;
+  color: var(--grey-500);
 }
 .tags-list a:hover {
   color: var(--primary-500);
 }
+.recipe {
+  display: block;
+}
+
 .recipe-img {
   height: 15rem;
   border-radius: var(--borderRadius);
@@ -500,18 +504,25 @@ Recipes
 @media screen and (min-width: 992px) {
   .recipes-container {
     grid-template-columns: 200px 1fr;
+    gap: 1rem;
+  }
+  .recipes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe p {
+    font-size: 0.85rem;
   }
   .tags-container {
     order: 0;
+    /* background: blue; */
   }
   .tags-list {
+    display: grid;
     grid-template-columns: 1fr;
   }
-  .recipe p {
-    font-size: 0.5rem;
-  }
 }
-@media screen and (min-width: 12000px) {
+@media screen and (min-width: 1200px) {
   .recipes-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -634,6 +645,7 @@ single Recipe Page
   display: grid;
   gap: 3rem;
 }
+
 .recipe-hero-img {
   height: 300px;
   border-radius: var(--borderRadius);
@@ -655,8 +667,9 @@ single Recipe Page
 .recipe-icons h5,
 .recipe-icons p {
   margin-bottom: 0;
-  font-size: 0.85rem;
+  font-size: 0.85em;
 }
+
 .recipe-icons p {
   color: var(--grey-600);
 }
@@ -667,12 +680,12 @@ single Recipe Page
   font-size: 0.7em;
   font-weight: 600;
 }
-.recipe-tags {
+.recipe-tags a {
   background: var(--primary-500);
   border-radius: var(--borderRadius);
   color: var(--white);
   padding: 0.05rem 0.5rem;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
   text-transform: capitalize;
 }
 @media screen and (min-width: 992px) {
@@ -690,4 +703,41 @@ single Recipe Page
   .recipe-content {
     grid-template-columns: 2fr 1fr;
   }
+}
+.single-instruction header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.single-instruction header p {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary-500);
+  margin-bottom: 0;
+}
+.single-instruction > p {
+  color: var(--grey-700);
+}
+
+.single-instruction header div {
+  height: 2px;
+  background: var(--grey-300);
+}
+
+.second-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.single-ingredient {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--grey-700);
+}
+.single-tool {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--primary-500);
+  text-transform: capitalize;
 }
